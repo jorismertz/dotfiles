@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+installer_location="/home/joris/dotfiles"
+install_script="$installer_location/installer/main.py"
+
+# sudo pacman -S python python-yaml
+# python $install_script $@
+
+python_path=$(which python 2> /dev/null)
+python_yaml_path=$(which python-yaml 2> /dev/null)
+if [ -z "$python_path" ] || ! pacman -Qs python-yaml > /dev/null; then
+    sudo pacman -S python python-yaml --noconfirm
+fi
+
+python $install_script $@

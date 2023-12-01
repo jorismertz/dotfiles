@@ -1,0 +1,41 @@
+links:
+  /var/lib/gdm/.config/monitors.xml: monitors.xml
+
+packages:
+  pacman:
+    - git
+    - make
+    - fish
+    - neovim
+    - neofetch
+    - kitty
+    - alacritty
+    - flatpak
+    - fzf
+    - ripgrep
+    - zip
+    # - xorg
+    # - nvidia-dkms
+    - nvidia-utils
+    - nodejs
+    - npm
+    - pnpm
+    - go
+    - yarn
+    - tldr
+    - man-db
+    - sxhkd
+    - polybar
+    - bat
+    - jq
+    - lazygit
+  yay:
+    - picom-ftlabs-git
+    - git-delta
+    - fnm-bin
+    - ttf-jetbrains-mono-nerd
+    - downgrade
+    - zoxide-git
+
+scripts:
+  - nerd-ls.sh
