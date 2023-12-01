@@ -58,7 +58,7 @@ def adapter_yay():
     if is_installed != 0:
         print("yay not installed, installing yay")
         cmd("git clone https://aur.archlinux.org/yay.git")
-        cmd("cd yay && makepkg -si --noconfirm; cd ..; rm -rf yay")
+        cmd("cd yay && makepkg -si --noconfirm; cd ../; rm -rf yay")
     
     return "yay -S {} --noconfirm".format(" ".join(config["packages"]["yay"]))
 

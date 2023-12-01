@@ -14,9 +14,9 @@ packages:
     - fzf
     - ripgrep
     - zip
-    # - xorg
+    - xorg
     # - nvidia-dkms
-    - nvidia-utils
+    # - nvidia-utils
     - nodejs
     - npm
     - pnpm
