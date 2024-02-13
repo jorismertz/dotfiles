@@ -1,0 +1,23 @@
+#!/usr/bin/env fish
+
+set USB_C 16
+set HDMI_1 17
+
+set tmp_location /tmp/toggle-display-input
+
+# Check if file exists, if not write USB-C to it
+if ! [ -e $tmp_location ]
+    touch $tmp_location
+    echo $USB_C > $tmp_location
+end
+
+set last_state (cat $tmp_location | xargs)
+
+
+if [ "$last_state" = "$USB_C" ]
+    m1ddc display 1 set input (echo $HDMI_1)
+    echo $HDMI_1 > $tmp_location
+else
+    m1ddc display 1 set input (echo $USB_C)
+    echo $USB_C > $tmp_location
+end
