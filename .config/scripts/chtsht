@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+language=$1
+query=$2
+
+curl cht.sh/$language/$query

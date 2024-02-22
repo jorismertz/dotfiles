@@ -1,8 +1,8 @@
 #! /opt/homebrew/bin/fish
 set currentWindowName (yabai -m query --windows --window | jq -r '.app')
 
-if [ $currentWindowName = "kitty" ]
-    open -n -a kitty
+if [ $currentWindowName = "wezterm" ]
+    open -n -a wezterm
 else
-    open -a kitty
+    open -a wezterm
 end
